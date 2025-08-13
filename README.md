@@ -1,4 +1,3 @@
-
 # Advanced Scientific Calculator (C++)
 
 A command-line scientific calculator built in C++ with full expression parsing, scientific functions, persistent history, and robust error handling.
@@ -12,66 +11,77 @@ A command-line scientific calculator built in C++ with full expression parsing, 
   - `log(x)` natural logarithm
   - `log10(x)` base-10 logarithm
 - Power operator: `a ^ b`
-- Persistent history saved to `history.txt` and auto-loaded on startup
+- Persistent history in `data/history.txt`
 - Error handling for invalid input, division by zero, and domain errors
 
 ## Folder Structure
-- `src/`
-  - `main.cpp`
-- `assets/`
-  - `Main-interface.png`
-  - `Operations.png`
-  - `Power-Operations.png`
-  - `History.png`
-  - `Error-Handling.png`
-- `data/`
-  - `history.txt`
 
-Tip: Keep screenshots in `assets/` and the history file in `data/`.
+SCIENTIFICCALCULATOR
+│
+├── src/
+│   └── Calculator.cpp        
+│
+├── assets/
+│   ├── Main-interface.png
+│   ├── Operations.png
+│   ├── Power-Operations.png
+│   ├── History.png
+│   └── Error-Handling.png
+│
+├── data/
+│   └── history.txt
+│
+├── .gitignore
+├── README.md
+└── LICENSE  (optional)
+
+
 
 ## Screenshots
 
 ### Main Interface
-Shows the welcome screen, supported operators, and functions.  
-![Main Interface](assets/Main-interface.png
-Demonstrates simple operations and reusing the last result.  
-![Operations](assets Operation
-Illustrates handling of the `^` operator.  
-![Power Operations](assets/Power-Operations Feature
-Shows saving to `data/history.txt` and viewing with the `history` command.  
-![History](assets/History Handling
-Examples: divide by zero, `sqrt(-1)`, etc., with clear messages.  
-![Error Handling](assets/Error-Handling.png Run
+![Main Interface](assets/Main-interface.png)
 
-Requirements:
-- C++17 compiler (g++/clang++). On Windows, use MinGW-w64.
+### Basic Operations
+![Operations](assets/Operations.png)
 
-Compile:
-- Windows (MinGW):
-  - `g++ -std=c++17 -O2 -Wall -Wextra -municode -o calc.exe src/main.cpp -mconsole`
-- Linux/macOS:
-  - `g++ -std=c++17 -O2 -Wall -Wextra -o calc src/main.cpp`
+### Power Operation
+![Power Operations](assets/Power-Operations.png)
 
-Run:
-- Windows: `.\calc.exe`
-- Linux/macOS: `./calc`
+### History Feature
+![History](assets/History.png)
 
-Note: Ensure the app can write to `data/history.txt`. If using an IDE, set the working directory to the project root.
+### Error Handling
+![Error Handling](assets/Error-Handling.png)
+
+## Build and Run
+
+**Requirements:**
+- C++17 compiler (g++/clang++)
+- On Windows: MinGW-w64 recommended
+
+**Compile:**
+- Windows:
+
+
+
+> Ensure the program can write to `data/history.txt`.  
+> In an IDE, set the working directory to the project root.
 
 ## Usage
 - Enter expressions:
-  - `2 + 3 * 4`
-  - `(5 + 7) / 3`
-  - `2 ^ 8`
+- `2 + 3 * 4`
+- `(5 + 7) / 3`
+- `2 ^ 8`
 - Scientific functions (degrees for trig):
-  - `sin(30)`, `cos(60)`, `tan(45)`
-  - `sqrt(16)`, `log(2.7182818)`, `log10(1000)`
-- History:
-  - Type `history`
+- `sin(30)`, `cos(60)`, `tan(45)`
+- `sqrt(16)`, `log(2.7182818)`, `log10(1000)`
+- Show history:
+- `history`
 - Use last answer:
-  - `5 * ans`
-
-Exit with `exit` or `quit`.
+- `5 * ans`
+- Exit:
+- `exit` or `quit`
 
 ## Error Handling
 Descriptive messages for:
@@ -81,17 +91,10 @@ Descriptive messages for:
 - Mismatched parentheses
 
 ## Implementation Notes
-- Tokenizer + shunting-yard to convert infix to postfix
-- Postfix evaluation with a stack
-- Trig inputs converted from degrees to radians internally
-- History appended to `data/history.txt` and loaded at startup
-
-## Contributing
-- Fork and create a feature branch
-- Follow consistent C++17 style; add tests when feasible
-- Open a PR with a clear description and updated screenshots as needed
+- Tokenizer + Shunting-yard algorithm for expression parsing
+- Postfix evaluation using a stack
+- Trigonometric inputs converted to radians internally
+- History appended to `data/history.txt` and loaded on startup
 
 ## License
-MIT License. See `LICENSE` for details.
-
-[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/89182813/bb07ec14-69cd-4150-ace3-94c561846d54/image.jpg
+MIT License — see `LICENSE` file.
