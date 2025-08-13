@@ -49,7 +49,7 @@ SCIENTIFICCALCULATOR
 ![Power Operations](assets/Power-Operations.png)
 
 ### History Feature
-![History](assets/History.png)
+![History](assets/HIstory.png)
 
 ### Error Handling
 ![Error Handling](assets/Error-Handling.png)
